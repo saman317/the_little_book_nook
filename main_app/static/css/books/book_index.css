@@ -1,0 +1,52 @@
+/* Style for the container of cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Create responsive grid */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Style for individual cards */
+  .card {
+    border: 2px solid #ddd; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures content doesn't overflow */
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Hover effect to lift the card */
+  }
+  
+  /* Style for the image inside the card */
+  .card img {
+    width: 100%; /* Makes the image fill the entire width of the card */
+    height: auto; /* Keeps the aspect ratio intact */
+    max-height: 200px; /* Restricts the height of the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px; /* Optional: add rounded corners to the image */
+    margin-bottom: 10px; /* Space between the image and the text */
+  }
+  
+  /* Style for the card title (book name) */
+  .card h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the review text */
+  .card h3 {
+    font-size: 1rem;
+    color: #555; /* Darker grey color for the text */
+    line-height: 1.4;
+  }
+  
+  /* Optional: Add a simple style for the 'Review' text label */
+  .card h3:first-of-type {
+    font-weight: normal;
+    color: #333;
+  }

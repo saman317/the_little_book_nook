@@ -1,0 +1,25 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/books/book_index.css' %}"/>
+{% endblock %} 
+{% block content %}
+
+
+<section class="card-container">
+  {% for book in books %}
+    <div class="card">
+        <a href="{% url 'book_detail' book.id %}"><h2>{{book.name}}</h2></a>
+      <div class="card-content">
+        {% if book.image %}
+        <img alt="Book Image" src="{{ book.image.url }}">
+            {% else %}
+        <img alt="Book Image" src="{% static 'images/book_default.jpg' %}">
+        {% endif %}
+        <h3>Review: {{book.review|slice:":50"}}{% if book.review|length > 50 %}...{% endif %}</h3>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
