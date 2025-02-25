@@ -12,7 +12,7 @@ AGES = (
 )
 class Book(models.Model):
     name= models.CharField(default='Book Title')
-    image = models.ImageField(upload_to='book/', default='/images/book_default.jpg')
+    image = models.ImageField(upload_to='book/', blank=True, null=True)
     review = models.TextField(default='Review')
     age = models.CharField(
         max_length=5,

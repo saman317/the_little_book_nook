@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CommentForm
 from .models import Book
+from django.conf import settings
 # Create your views here.
 class Home(LoginView):
     template_name = 'home.html'
@@ -16,7 +17,7 @@ def about(request):
 @login_required
 def book_index(request):
     books = Book.objects.all()
-    return render(request, 'books/index.html', {'books': books})
+    return render(request, 'books/index.html', {'books': books, 'MEDIA_URL': settings.MEDIA_URL})
 
 @login_required
 def book_detail(request, book_id):

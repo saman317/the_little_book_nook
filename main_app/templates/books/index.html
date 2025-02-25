@@ -14,9 +14,9 @@
         {% if book.image %}
         <img alt="Book Image" src="{{ book.image.url }}">
             {% else %}
-        <img alt="Book Image" src="{% static 'images/book_default.jpg' %}">
+        <img alt="Book Image" src="{{MEDIA_URL}}book/book_default.jpg">
         {% endif %}
-        <h3>Review: {{book.review|slice:":50"}}{% if book.review|length > 50 %}...{% endif %}</h3>
+        <h3> {{book.review|slice:":50"}}{% if book.review|length > 50 %}...{% endif %}</h3>
       </div>
     </div>
   {% endfor %}
