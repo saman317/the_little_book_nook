@@ -8,8 +8,7 @@
 
 To get started with the project, please follow the links below:
 - **Trello Board**: [Trello Link](https://trello.com/b/X0JUlXeD/children-book-review)
-- **Repository**: ()
-- **Deployed Link (front End)**: 
+- **Deployed Link **: 
 
 ## Key Attributes
 - Class and Lecture Notes
