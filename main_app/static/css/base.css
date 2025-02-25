@@ -24,17 +24,89 @@ body {
   background-attachment: fixed; /* Keeps the background fixed when scrolling */
 }
 
-/* Apply background color and text color for the About page */
-body.about-page {
-  background-color: #faebd7; /* Soft, warm almond color */
-  color: #5a3d34; /* Warm brown color for text */
-  background-image: none; /* Remove background image */
+
+.about-container {
+  background-color: #f5f5dc;  
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+  max-width: 800px; /* Limit the width */
+  margin: 0 auto; /* Center the container */
 }
 
-/* Make sure the text color for h1 in about-page is updated */
-body.about-page h1 {
-  color: #5a3d34; /* Warm brown color for the h1 text */
-  text-shadow: none; /* Remove the text-shadow if you want it simple */
+.about-container h1 {
+  font-size: 2.5rem; /* Larger size for the main title */
+  color: #2c1a0d; /* Dark brown for the heading */
+  text-align: center;
+}
+
+.about-container hr {
+  margin: 20px 0; /* Add space around the line */
+  border: 0;
+  border-top: 2px solid #8b4513; /* Brown color for the line */
+}
+
+.about-container .page-content {
+  font-size: 1.2rem;
+  color: #5a3d34; /* Warm brown color for the text */
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+
+.delete-container {
+  background-color: #f5f5dc;  /* Soft beige background */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+  max-width: 600px; /* Limit the width */
+  margin: 0 auto; /* Center the container */
+}
+
+.delete-container h1, .delete-container h2 {
+  color: #2c1a0d; /* Dark brown for text */
+}
+
+.delete-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* Specific styling for the delete button */
+.btn.danger {
+  background-color: #f44336; /* Red color for the delete button */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.danger:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Cancel button styles */
+.btn.secondary {
+  background-color: #8b4513; /* Rich brown color for cancel button */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-family: 'Princess Sofia', cursive;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.secondary:hover {
+  background-color: #6f4f25; /* Slightly darker brown on hover */
 }
 
 /* Header and navigation styles */

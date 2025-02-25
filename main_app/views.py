@@ -9,6 +9,8 @@ from .forms import CommentForm
 from .models import Book
 from django.conf import settings
 from django.contrib.auth import login
+from django.urls import reverse_lazy
+
 
 # Create your views here.
 class Home(LoginView):
@@ -28,6 +30,7 @@ def book_detail(request, book_id):
     return render(request, 'books/detail.html',
      {'book' : book,
      'comment_form': comment_form,
+      'MEDIA_URL': settings.MEDIA_URL
      })
 
 class BookCreate(LoginRequiredMixin, CreateView):
@@ -41,11 +44,28 @@ class BookCreate(LoginRequiredMixin, CreateView):
 
 class BookUpdate(LoginRequiredMixin, UpdateView):
     model = Book
-    fields = ['image', 'review','age', 'recommend']
+    fields = ['image', 'review', 'age', 'recommend']
+
+    # Only allow users to update books they created
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(user=self.request.user)
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user  # Ensure the logged-in user is the owner of the book
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('book_detail', kwargs={'book_id': self.object.pk})
 
 class BookDelete(LoginRequiredMixin, DeleteView):
     model = Book
-    success_url = '/books/'
+    success_url = reverse_lazy('book_index')  # Redirect to the book index after deletion
+
+    # Only allow users to delete books they created
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(user=self.request.user)
 
 @login_required
 def add_comment(request, book_id):

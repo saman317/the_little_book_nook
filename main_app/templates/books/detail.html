@@ -10,7 +10,7 @@
     {% if book.image %}
       <img class="book-image" alt="Book Image" src="{{ book.image.url }}">
     {% else %}
-      <img class="book-image" alt="Book Image" src="{% static 'images/book_default.jpg' %}">
+      <img class="book-image" alt="Book Image" src="{{MEDIA_URL}}book/book_default.jpg">
     {% endif %}
   
     <div class="card-content">
@@ -38,7 +38,7 @@
   <!-- Separate Comment List Container -->
   <div class="comment-list-container">
     <div class="subsection_title">
-      <h2>Comments</h2>
+      <h2>Reviews</h2>
     </div>
 
     {% if book.comment_set.all.count %}

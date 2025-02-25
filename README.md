@@ -1,5 +1,7 @@
 # The Little Book Nook
 
+![Logo](BookLogo.png)
+
 **The Little Book Nook** is a platform where users can upload children book recommendations, and add comments
 
 ## Getting Started
