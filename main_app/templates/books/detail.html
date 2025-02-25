@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/books/book_detail.css' %}" />
 {% endblock %}
+
 {% block content %}
 <section class="book-container">
   <div class="card">
@@ -10,7 +12,7 @@
     {% if book.image %}
       <img class="book-image" alt="Book Image" src="{{ book.image.url }}">
     {% else %}
-      <img class="book-image" alt="Book Image" src="{{MEDIA_URL}}book/book_default.jpg">
+      <img class="book-image" alt="Book Image" src="{{ MEDIA_URL }}book/book_default.jpg">
     {% endif %}
   
     <div class="card-content">
@@ -21,9 +23,9 @@
 
     <div class="book-actions">
       {% if book.user == request.user %}
-      <a href="{% url 'book_update' book.id %}" class="btn warn">Edit</a>
-      <a href="{% url 'book_delete' book.id %}" class="btn danger">Delete</a>
-    {% endif %}
+        <a href="{% url 'book_update' book.id %}" class="btn warn">Edit</a>
+        <a href="{% url 'book_delete' book.id %}" class="btn danger">Delete</a>
+      {% endif %}
     </div>
   </div>
 

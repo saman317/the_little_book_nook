@@ -1,18 +1,21 @@
 {% extends 'base.html' %} 
 {% load static %} 
+
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/form.css' %}" />
 {% endblock %} 
-{% block content %}
 
+{% block content %}
 <div class="page-header">
     {% if object %}
-    <h2>Edit {{ object.name }}</h2>
+        <h2>Edit {{ object.name }}</h2>
     {% else %}
-  <h1>Add a Book</h1>
-  {% endif %}
-  </div>
-<form action="" method="post" class="form-container">
+        <h1>Add a Book</h1>
+    {% endif %}
+</div>
+
+<!-- Add enctype="multipart/form-data" to support file uploads -->
+<form action="" method="post" class="form-container" enctype="multipart/form-data">
   {% csrf_token %}
   <table>
     {{ form.as_table }}

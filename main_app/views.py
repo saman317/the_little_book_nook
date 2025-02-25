@@ -42,14 +42,9 @@ class BookCreate(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user  # Assign the logged-in user to the book
         return super().form_valid(form)
 
-class BookUpdate(LoginRequiredMixin, UpdateView):
+class BookUpdate(UpdateView):
     model = Book
-    fields = ['image', 'review', 'age', 'recommend']
-
-    # Only allow users to update books they created
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        return queryset.filter(user=self.request.user)
+    fields = ['name', 'image', 'review', 'age', 'recommend']  # Include the 'image' field
 
     def form_valid(self, form):
         form.instance.user = self.request.user  # Ensure the logged-in user is the owner of the book
