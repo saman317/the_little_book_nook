@@ -1,52 +1,104 @@
-/* Style for the container of cards */
+/* Include Google Fonts for Princess Sofia */
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font */
+  line-height: 1.6;
+  background-color: #f9f9f9; /* Light warm beige background */
+  color: #5a3d34; /* Warm brown color for text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Card Container: Flex layout for horizontal card arrangement */
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Create responsive grid */
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-direction: row; /* Align cards horizontally */
+  flex-wrap: wrap; /* Allow the cards to wrap onto the next line when necessary */
+  justify-content: space-around; /* Distribute the cards evenly across the row */
+  gap: 20px; /* Add spacing between the cards */
+  padding: 20px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 1200px; /* Limit the container width */
+}
+
+/* Individual card styling */
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* Light white background */
+  border-radius: 12px; /* Rounded corners for the card */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 250px; /* Set a fixed width for each card */
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift the card when hovered */
+}
+
+/* Card title styling */
+.card h2 {
+  color: #2c1a0d; /* Dark brown */
+  font-size: 1.5rem; /* Size the title appropriately */
+  font-weight: 900;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Add depth to title with shadow */
+}
+
+/* Card content styling */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image inside card */
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Review text styling */
+.card h3 {
+  color: #5a3d34; /* Warm brown for the review text */
+  font-size: 1rem;
+  padding: 0 10px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .card-container {
+    padding: 10px;
+    justify-content: center; /* Center the cards on smaller screens */
   }
-  
-  /* Style for individual cards */
+
   .card {
-    border: 2px solid #ddd; /* Light grey border */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensures content doesn't overflow */
-    background-color: #f9f9f9; /* Light background color */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    width: 180px; /* Make cards smaller on smaller screens */
   }
-  
-  .card:hover {
-    transform: translateY(-5px); /* Hover effect to lift the card */
-  }
-  
-  /* Style for the image inside the card */
-  .card img {
-    width: 100%; /* Makes the image fill the entire width of the card */
-    height: auto; /* Keeps the aspect ratio intact */
-    max-height: 200px; /* Restricts the height of the image */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 8px; /* Optional: add rounded corners to the image */
-    margin-bottom: 10px; /* Space between the image and the text */
-  }
-  
-  /* Style for the card title (book name) */
+
   .card h2 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
   }
-  
-  /* Style for the review text */
-  .card h3 {
-    font-size: 1rem;
-    color: #555; /* Darker grey color for the text */
-    line-height: 1.4;
+
+  .card-content h3 {
+    font-size: 0.9rem;
   }
-  
-  /* Optional: Add a simple style for the 'Review' text label */
-  .card h3:first-of-type {
-    font-weight: normal;
-    color: #333;
-  }
+}

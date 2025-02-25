@@ -1,70 +1,196 @@
-/* General reset for styling */
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font */
+  line-height: 1.6;
+  background-color: #f9f9f9; /* Light warm beige background */
+  color: #5a3d34; /* Warm brown color for text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("https://img.freepik.com/premium-photo/cozy-reading-nook-with-comfortable-chairs-bookshelves-inviting-students_741910-47526.jpg");
+  background-size: cover; /* Ensure the image covers the entire screen */
+  background-position: center center;
+  background-repeat: no-repeat; /* Prevent tiling */
+  background-attachment: fixed; /* Keeps the background fixed when scrolling */
+}
+
+/* Apply background color and text color for the About page */
+body.about-page {
+  background-color: #faebd7; /* Soft, warm almond color */
+  color: #5a3d34; /* Warm brown color for text */
+  background-image: none; /* Remove background image */
+}
+
+/* Make sure the text color for h1 in about-page is updated */
+body.about-page h1 {
+  color: #5a3d34; /* Warm brown color for the h1 text */
+  text-shadow: none; /* Remove the text-shadow if you want it simple */
+}
+
+/* Header and navigation styles */
+header {
+  background-color: #8b4513; /* Rich brown background for header */
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Display links in a horizontal row */
+  justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+  margin: 0 15px; /* Add space between the items */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+  background-color: #6f4f25; /* Darker brown on hover */
+  border-radius: 5px; /* Optional: adds rounded corners for hover effect */
+}
+
+/* Styling the logout button */
+#logout-form button {
+  background-color: #f44336; /* Red color for the logout button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-family: 'Princess Sofia', cursive;
+}
+
+#logout-form button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Main content styling */
+main {
+  padding: 20px;
+}
+
+/* Styling the title of the page */
+h1, h2 {
+  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font to headings */
+  color: #2c1a0d; /* Dark brown for h1 and h2 for good contrast */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Add a little extra flair for h1 */
+h1 {
+  font-size: 3.5rem; /* Slightly bigger for emphasis */
+  font-weight: 900; /* Boldest weight for h1 */
+  color: #F1E5C9; /* Warm cream color for contrast */
+  text-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+}
+
+/* For the rest of the page */
+h2 {
+  font-size: 2rem;
+  color: #6f4f25; /* Medium brown for h2 */
+}
+
+/* Section styling */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8); /* Light semi-transparent white */
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #faebd7; /* Soft, warm almond color */
+}
+
+form.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form.login h1 {
+  font-size: 2.2rem;
+  color: #8b4513; /* Rich, chocolate brown */
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Princess Sofia', cursive; /* Ensure form login title uses Princess Sofia */
+}
+
+form.login input[type="text"],
+form.login input[type="password"] {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 2px solid #d2b48c; /* Light tan/brown border */
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: #f5deb3; /* Wheat color for inputs */
+}
+
+form.login input[type="text"]:focus,
+form.login input[type="password"]:focus {
+  border-color: #8b4513; /* Darker brown border on focus */
+  background-color: #f4a300; /* Warm amber color on focus */
+}
+
+.btn.submit {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #8b4513; /* Rich brown button color */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn.submit:hover {
+  background-color: #6f4f25; /* Slightly darker brown on hover */
+}
+
+form.login input[type="hidden"] {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2.2rem;
   }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+  section {
+      padding: 25px;
   }
-  
-  /* Header and navigation styles */
-  header {
-    background-color: #333;
-    padding: 10px 0;
+  form.login {
+      padding: 25px;
   }
-  
-  nav ul {
-    list-style-type: none; /* Remove the bullet points */
-    display: flex; /* Display links in a horizontal row */
-    justify-content: center; /* Center the navigation items */
-  }
-  
-  nav ul li {
-    margin: 0 15px; /* Add space between the items */
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none; /* Remove underline from links */
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-  }
-  
-  nav ul li a:hover {
-    background-color: #575757; /* Add a dark hover effect */
-    border-radius: 5px; /* Optional: adds rounded corners for hover effect */
-  }
-  
-  /* Styling the logout button */
-  #logout-form button {
-    background-color: #f44336; /* Red color for the logout button */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #logout-form button:hover {
-    background-color: #d32f2f; /* Darker red on hover */
-  }
-  
-  /* Main content styling */
-  main {
-    padding: 20px;
-  }
-  
-  /* Styling the title of the page */
-  h1, h2 {
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
+}

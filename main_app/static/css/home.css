@@ -1,117 +1,125 @@
-/* General Reset */
+/* Import Princess Sofia font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
+
+/* Global Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    background-image:url("https://img.freepik.com/premium-photo/cozy-reading-nook-with-comfortable-chairs-bookshelves-inviting-students_741910-47526.jpg");
-    line-height: 1.6;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    text-align: center;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
-  
-  /* Page Title */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font to the body */
+  background-color: #f9f9f9; /* Light warm beige background */
+  line-height: 1.6;
+  color: #5a3d34; /* Warm brown for text, like a cozy wood tone */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("https://img.freepik.com/premium-photo/cozy-reading-nook-with-comfortable-chairs-bookshelves-inviting-students_741910-47526.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: 'Princess Sofia', cursive; /* Explicitly apply Princess Sofia font to h1 */
+  font-size: 3rem;
+  font-weight: 900;
+  color: #F1E5C9;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #faebd7;
+}
+
+form.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font to the entire form */
+}
+
+form.login h1 {
+  font-family: 'Princess Sofia', cursive; /* Ensure form login title uses Princess Sofia */
+  font-size: 2.2rem;
+  color: #8b4513;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form.login input[type="text"],
+form.login input[type="password"] {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 2px solid #d2b48c;
+  font-size: 1.1rem;
+  outline: none;
+  background-color: #f5deb3;
+  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font to the input fields */
+}
+
+form.login input[type="text"]:focus,
+form.login input[type="password"]:focus {
+  border-color: #8b4513;
+  background-color: #f4a300;
+  box-shadow: 0 0 8px rgba(143, 95, 37, 0.7);
+  outline: none;
+  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font when focused */
+}
+
+.btn.submit {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #8b4513;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font to the button */
+}
+
+.btn.submit:hover {
+  background-color: #6f4f25;
+}
+
+form.login input[type="hidden"] {
+  display: none;
+}
+
+@media (max-width: 768px) {
   h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 40px;
-    text-transform: capitalize;
+      font-size: 2.2rem;
   }
-  
-  /* Login Section Styling */
   section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 25px;
   }
-  
   form.login {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+      padding: 25px;
   }
-  
-  /* Heading inside the form */
-  form.login h1 {
-    font-size: 2rem;
-    color: #4CAF50;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* Form Input Fields */
-  form.login input[type="text"],
-  form.login input[type="password"] {
-    width: 100%;
-    padding: 12px 20px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  form.login input[type="text"]:focus,
-  form.login input[type="password"]:focus {
-    border-color: #4CAF50;
-  }
-  
-  /* Button Styles */
-  .btn.submit {
-    width: 100%;
-    padding: 12px 20px;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn.submit:hover {
-    background-color: #45a049;
-  }
-  
-  /* Hidden Inputs */
-  form.login input[type="hidden"] {
-    display: none;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2rem;
-    }
-    section {
-      padding: 20px;
-    }
-    form.login {
-      padding: 20px;
-    }
-  }
-  
+}

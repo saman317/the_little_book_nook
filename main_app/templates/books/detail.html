@@ -1,55 +1,61 @@
-{% extends 'base.html' %} 
-{% load static %} 
+{% extends 'base.html' %}
+{% load static %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/books/book_detail.css' %}" />
-{% endblock %} 
+{% endblock %}
 {% block content %}
 <section class="book-container">
-    
-  <div class="book_details">
+  <div class="card">
     <h2>{{ book.name }}</h2>
     {% if book.image %}
-    <img alt="Book Image" src="{{ book.image.url }}">
-  {% else %}
-    <img alt="Book Image" src="{% static 'images/book_default.jpg' %}">
-  {% endif %}
+      <img class="book-image" alt="Book Image" src="{{ book.image.url }}">
+    {% else %}
+      <img class="book-image" alt="Book Image" src="{% static 'images/book_default.jpg' %}">
+    {% endif %}
   
-    <p>Review: {{book.review}}</p>
-    <p>Age Group: {{ book.age }}</p>
-    <p>Recommend: {{book.get_recommend_display}}</p>
+    <div class="card-content">
+      <p>Review: {{ book.review }}</p>
+      <p>Age Group: {{ book.age }}</p>
+      <p>Recommend: {{ book.get_recommend_display }}</p>
+    </div>
+
     <div class="book-actions">
-        <a href="{% url 'book_update' book.id %}" class="btn warn">Edit</a>
-        <a href="{% url 'book_delete' book.id %}" class="btn danger">Delete</a>
+      <a href="{% url 'book_update' book.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'book_delete' book.id %}" class="btn danger">Delete</a>
+    </div>
+  </div>
+
+  <!-- Add Review Section -->
+  <div class="add-review-container">
+    <h3>Add A Review</h3>
+    <form action="{% url 'add_comment' book.id %}" method="post" class="form-review" autocomplete="off">
+      {% csrf_token %}
+      {{ comment_form.as_p }}
+      <button type="submit" class="btn submit">Add Comment</button>
+    </form>
+  </div>
+
+  <!-- Separate Comment List Container -->
+  <div class="comment-list-container">
+    <div class="subsection_title">
+      <h2>Comments</h2>
+    </div>
+
+    {% if book.comment_set.all.count %}
+      <div class="comment-list">
+        {% for comment in book.comment_set.all %}
+          <div class="comment-item">
+            <p><strong>Recommend:</strong> {{ comment.get_recommend_display }}</p>
+            <p><strong>Review:</strong> {{ comment.review }}</p>
+            <hr>
+          </div>
+        {% endfor %}
       </div>
+    {% else %}
+      <div class="subsection-content">
+        <p>{{ book.name }} has no comments!</p>
+      </div>
+    {% endif %}
   </div>
 </section>
-<div class="comment-container">
-    <section class="comments">
-        <div class="subsection_title">
-            <h2>Comments</h2>
-        </div>
-        <h3>Add A Review</h3>
-        <form action="{% url 'add_comment' book.id %}" method="post" class="subsection-content" autocomplete="off">
-            {% csrf_token %} 
-            {{ comment_form.as_p }}
-            <button type="submit" class="btn submit">Add Comment</button>
-          </form>
-          {% if book.comment_set.all.count %}
-          <div class="comment-list">
-            {% for comment in book.comment_set.all %}
-                <div class="comment-item">
-                    <p><strong>Recommend:</strong> {{ comment.get_recommend_display }}</p>
-                    <p><strong>Review:</strong> {{ comment.review }}</p>
-                    <hr> 
-                </div>
-            {% endfor %}
-        </div>
-          {% else %}
-          <div class="subsection-content">
-           <p> {{book.name}} has no comments! </p>
-          </div>
-          {% endif %}
-    </section>
-</div>
-
 {% endblock %}

@@ -8,6 +8,8 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import CommentForm
 from .models import Book
 from django.conf import settings
+from django.contrib.auth import login
+
 # Create your views here.
 class Home(LoginView):
     template_name = 'home.html'
