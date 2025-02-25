@@ -11,13 +11,13 @@ AGES = (
 
 )
 class Book(models.Model):
-    name= models.CharField(default='Book Title')
+    name= models.CharField(default='Book Title', max_length=1000)
     image = models.ImageField(upload_to='book/', blank=True, null=True)
     review = models.TextField(default='Review')
     age = models.CharField(
         max_length=5,
         choices=AGES,
-        default=AGES[0][0]
+        default=AGES[0][0],
     )
     recommend = models.BooleanField(default=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
