@@ -1,4 +1,3 @@
-/* Include Google Fonts for Princess Sofia */
 @import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
 
 * {
@@ -7,26 +6,23 @@
   box-sizing: border-box;
 }
 
-/* Body styling */
 body {
-  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font */
+  font-family: 'Princess Sofia', cursive;
   line-height: 1.6;
-  background-color: #f9f9f9; /* Light warm beige background */
-  color: #5a3d34; /* Warm brown color for text */
+  background-color: #f9f9f9;
+  color: #5a3d34;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
   text-align: center;
-  /* Background removed for About Page */
 }
 
 .about-page body {
-  background-image: none; /* Remove background image specifically for About Page */
+  background-image: none;
 }
 
-/* Page Header Styles */
 .page-header {
   text-align: center;
   margin-top: 30px;
@@ -35,27 +31,25 @@ body {
 
 .page-header h1,
 .page-header h2 {
-  color: #2c1a0d; /* Dark brown to contrast with light background */
-  font-size: 2.5rem; /* Larger for emphasis */
+  color: #2c1a0d;
+  font-size: 2.5rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for more depth */
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Form Container */
 .form-container {
-  background-color: rgba(255, 255, 255, 0.9); /* Light, soft semi-transparent white */
-  border-radius: 12px; /* Rounded corners for softness */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   padding: 30px 40px;
   max-width: 600px;
   margin: 0 auto;
-  background-color: #faebd7; /* Warm almond color */
-  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font to the form container */
+  background-color: #faebd7;
+  font-family: 'Princess Sofia', cursive;
 }
 
-/* Table and Form Elements */
 table {
   width: 100%;
   margin-bottom: 20px;
@@ -72,24 +66,23 @@ table td textarea {
   width: 100%;
   padding: 12px;
   font-size: 1.1rem;
-  border: 1px solid #d2b48c; /* Light tan/brown border */
+  border: 1px solid #d2b48c;
   border-radius: 8px;
   outline: none;
   transition: border-color 0.3s ease;
-  background-color: #f5deb3; /* Wheat color */
-  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font to form input fields */
+  background-color: #f5deb3;
+  font-family: 'Princess Sofia', cursive;
 }
 
 table td input:focus,
 table td select:focus,
 table td textarea:focus {
-  border-color: #8b4513; /* Dark brown on focus */
-  background-color: #f4a300; /* Warm amber on focus */
+  border-color: #8b4513;
+  background-color: #f4a300;
 }
 
-/* Button Styling */
 .btn.submit {
-  background-color: #8b4513; /* Rich brown for the button */
+  background-color: #8b4513;
   color: white;
   padding: 15px 25px;
   font-size: 1.2rem;
@@ -101,36 +94,33 @@ table td textarea:focus {
   display: block;
   width: 100%;
   margin-top: 20px;
-  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font to the submit button */
+  font-family: 'Princess Sofia', cursive;
 }
 
 .btn.submit:hover {
-  background-color: #6f4f25; /* Darker brown on hover */
+  background-color: #6f4f25;
 }
 
-/* Error Handling (if any error is displayed) */
 .form-container .error-message {
-  color: #f44336; /* Red color for error messages */
+  color: #f44336;
   margin-top: 10px;
   font-size: 1rem;
   font-weight: bold;
 }
 
-/* Add spacing between form fields and ensure they are properly aligned */
 table td:first-child {
   width: 150px;
   font-weight: bold;
-  color: #2c1a0d; /* Dark brown for labels */
+  color: #2c1a0d;
 }
 
 table td input,
 table td select,
 table td textarea {
   font-size: 1rem;
-  color: #5a3d34; /* Warm brown for the text */
+  color: #5a3d34;
 }
 
-/* Responsive Styling */
 @media (max-width: 768px) {
   .form-container {
     padding: 20px 25px;

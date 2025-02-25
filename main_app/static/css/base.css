@@ -48,7 +48,7 @@ body {
 
 .about-container .page-content {
   font-size: 1.2rem;
-  color: #5a3d34; /* Warm brown color for the text */
+  color: #5a3d34; 
   text-align: center;
   line-height: 1.6;
   margin-top: 20px;
@@ -56,16 +56,16 @@ body {
 
 
 .delete-container {
-  background-color: #f5f5dc;  /* Soft beige background */
+  background-color: #f5f5dc;  
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
-  max-width: 600px; /* Limit the width */
-  margin: 0 auto; /* Center the container */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); 
+  max-width: 600px; 
+  margin: 0 auto; 
 }
 
 .delete-container h1, .delete-container h2 {
-  color: #2c1a0d; /* Dark brown for text */
+  color: #2c1a0d; 
 }
 
 .delete-container .form {
@@ -75,26 +75,26 @@ body {
 }
 
 
-/* Specific styling for the delete button */
+
 .btn.danger {
-  background-color: #f44336; /* Red color for the delete button */
+  background-color: #f44336; 
   color: white;
   border: none;
   padding: 15px 30px;
   font-size: 1.2rem;
-  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font */
+  font-family: 'Princess Sofia', cursive; 
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .btn.danger:hover {
-  background-color: #d32f2f; /* Darker red on hover */
+  background-color: #d32f2f; 
 }
 
-/* Cancel button styles */
+
 .btn.secondary {
-  background-color: #8b4513; /* Rich brown color for cancel button */
+  background-color: #8b4513; 
   color: white;
   border: none;
   padding: 15px 30px;
@@ -106,42 +106,41 @@ body {
 }
 
 .btn.secondary:hover {
-  background-color: #6f4f25; /* Slightly darker brown on hover */
+  background-color: #6f4f25; 
 }
 
-/* Header and navigation styles */
 header {
-  background-color: #8b4513; /* Rich brown background for header */
+  background-color: #8b4513; 
   padding: 10px 0;
 }
 
 nav ul {
-  list-style-type: none; /* Remove bullet points */
-  display: flex; /* Display links in a horizontal row */
-  justify-content: center; /* Center the navigation items */
+  list-style-type: none; 
+  display: flex; 
+  justify-content: center; 
 }
 
 nav ul li {
-  margin: 0 15px; /* Add space between the items */
+  margin: 0 15px; 
 }
 
 nav ul li a {
   color: white;
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none; 
   font-size: 1.2rem;
   font-weight: bold;
   padding: 10px;
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  transition: background-color 0.3s ease; 
 }
 
 nav ul li a:hover {
-  background-color: #6f4f25; /* Darker brown on hover */
-  border-radius: 5px; /* Optional: adds rounded corners for hover effect */
+  background-color: #6f4f25; 
+  border-radius: 5px; 
 }
 
-/* Styling the logout button */
+
 #logout-form button {
-  background-color: #f44336; /* Red color for the logout button */
+  background-color: #f44336; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -153,38 +152,35 @@ nav ul li a:hover {
 }
 
 #logout-form button:hover {
-  background-color: #d32f2f; /* Darker red on hover */
+  background-color: #d32f2f; 
 }
 
-/* Main content styling */
+
 main {
   padding: 20px;
 }
 
-/* Styling the title of the page */
 h1, h2 {
-  font-family: 'Princess Sofia', cursive; /* Apply Princess Sofia font to headings */
-  color: #2c1a0d; /* Dark brown for h1 and h2 for good contrast */
+  font-family: 'Princess Sofia', cursive; 
+  color: #2c1a0d; 
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* Add a little extra flair for h1 */
+
 h1 {
-  font-size: 3.5rem; /* Slightly bigger for emphasis */
-  font-weight: 900; /* Boldest weight for h1 */
-  color: #F1E5C9; /* Warm cream color for contrast */
-  text-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+  font-size: 3.5rem; 
+  font-weight: 900; 
+  color: #F1E5C9; 
+  text-shadow: 6px 6px 20px rgba(0, 0, 0, 0.7); 
 }
 
-/* For the rest of the page */
 h2 {
   font-size: 2rem;
-  color: #6f4f25; /* Medium brown for h2 */
+  color: #6f4f25; 
 }
 
-/* Section styling */
 section {
   display: flex;
   justify-content: center;
@@ -192,11 +188,11 @@ section {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.8); /* Light semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.8); 
   padding: 40px 50px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  background-color: #faebd7; /* Soft, warm almond color */
+  background-color: #faebd7; 
 }
 
 form.login {
@@ -208,10 +204,10 @@ form.login {
 
 form.login h1 {
   font-size: 2.2rem;
-  color: #8b4513; /* Rich, chocolate brown */
+  color: #8b4513; 
   margin-bottom: 20px;
   text-align: center;
-  font-family: 'Princess Sofia', cursive; /* Ensure form login title uses Princess Sofia */
+  font-family: 'Princess Sofia', cursive; 
 }
 
 form.login input[type="text"],
@@ -220,23 +216,23 @@ form.login input[type="password"] {
   padding: 15px 20px;
   margin-bottom: 15px;
   border-radius: 10px;
-  border: 2px solid #d2b48c; /* Light tan/brown border */
+  border: 2px solid #d2b48c; 
   font-size: 1.1rem;
   outline: none;
   transition: border-color 0.3s ease;
-  background-color: #f5deb3; /* Wheat color for inputs */
+  background-color: #f5deb3; 
 }
 
 form.login input[type="text"]:focus,
 form.login input[type="password"]:focus {
-  border-color: #8b4513; /* Darker brown border on focus */
-  background-color: #f4a300; /* Warm amber color on focus */
+  border-color: #8b4513; 
+  background-color: #f4a300; 
 }
 
 .btn.submit {
   width: 100%;
   padding: 15px 20px;
-  background-color: #8b4513; /* Rich brown button color */
+  background-color: #8b4513; 
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
@@ -248,7 +244,7 @@ form.login input[type="password"]:focus {
 }
 
 .btn.submit:hover {
-  background-color: #6f4f25; /* Slightly darker brown on hover */
+  background-color: #6f4f25; 
 }
 
 form.login input[type="hidden"] {
