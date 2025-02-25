@@ -20,8 +20,10 @@
     </div>
 
     <div class="book-actions">
+      {% if book.user == request.user %}
       <a href="{% url 'book_update' book.id %}" class="btn warn">Edit</a>
       <a href="{% url 'book_delete' book.id %}" class="btn danger">Delete</a>
+    {% endif %}
     </div>
   </div>
 
