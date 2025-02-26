@@ -8,7 +8,7 @@
 
 To get started with the project, please follow the links below:
 - **Trello Board**: [Trello Link](https://trello.com/b/X0JUlXeD/children-book-review)
-- **Deployed Link **: 
+- **Deployed Link **: (https://booknook-app-9c9a09f945da.herokuapp.com/books/)
 
 ## Key Attributes
 - Class and Lecture Notes
@@ -29,6 +29,7 @@ In future iterations, we plan to introduce the following features:
 - Improve css
 - can like reviews
 - create categories for book types and have filters
+- Use some apis
 
 
 
